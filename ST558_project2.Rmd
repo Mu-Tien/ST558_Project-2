@@ -20,11 +20,18 @@ I am going to use two different method to build my model.First, I will use leave
 
 click below links to check the analysis of each weekday.\
 [Monday analysis](Monday.md)\
+
 [Tuesday analysis](Tuesday.md)\
+
 [Wednesday analysis](Wednesday.md)\
+
 [Thursday analysis](Thursday.md)\
+
 [Friday analysis](Friday.md)\
+
 [Saturday analysis](Saturday.md)\
+
 [Sunday analysis](Sunday.md)\
+
 
 In these analysis, we can see that

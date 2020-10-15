@@ -136,8 +136,8 @@ model2 <- cnt~season+yr+mnth+hr+holiday+weathersit+temp+atemp+hum+windspeed
 RegTree_fit2 <- train(model2, data = HourDataTrain, method = "bstTree",
                 trControl=trctrl,
                 preProcess = c("center", "scale"),
-                tuneGrid=expand.grid(mstop=seq(200,400,10),
-                                     maxdepth=5:9, nu=0.1)
+                tuneGrid=expand.grid(mstop=seq(100,400,15),
+                                     maxdepth=4:8, nu=0.1)
                  )
 
 # show the training result
