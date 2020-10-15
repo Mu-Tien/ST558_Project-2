@@ -24,4 +24,4 @@ click below links to check the analysis of each weekday.
 [Saturday analysis](Saturday.md)
 [Sunday analysis](Sunday.md)
 
-In these analysis, we can see that
+In these analysis, we can see that the boosted tree model has the smaller RMSE on all the training model compare to the tree-base model.

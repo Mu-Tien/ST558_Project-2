@@ -33,7 +33,6 @@ library(DT)
 
 # Read in data
 ```{r data}
-setwd("C:\\Users\\LeeSF\\Desktop\\2020 fall\\ST558")
 
 #read in hour data
 HourData <- read.csv("hour.csv")
@@ -111,7 +110,7 @@ model1 <- cnt~season+yr+mnth+hr+holiday+weathersit+temp+atemp+hum+windspeed
 RegTree_fit1 <- train(model1, data = HourDataTrain, method = "rpart",
                  trControl=trctrl,
                  preProcess = c("center", "scale"),
-                 tuneGrid=expand.grid(cp=seq(0.001,0.002,0.00005))
+                 tuneGrid=expand.grid(cp=seq(0.0001,0.0015,0.00005))
 )
 
 # show the training result
