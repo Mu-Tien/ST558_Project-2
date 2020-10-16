@@ -22,7 +22,7 @@ click below links to check the analysis of each weekday.\
 
 [Monday analysis](ST558_project2_Monday.md)\
 
-[Tuesday analysis](2 .md) \
+[Tuesday analysis](Tuesday.md) \
 
 [Wednesday analysis](3 .md) \
 

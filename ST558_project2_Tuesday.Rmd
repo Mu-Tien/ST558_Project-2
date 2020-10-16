@@ -33,3 +33,10 @@ apply(reports, MARGIN = 1,
 
 ```
 
+```{r}
+render("ST558_project2_Monday.Rmd",
+       output_format = "github_document",
+       output_file = "Tuesday.md",
+       params =list(w=2))
+```
+

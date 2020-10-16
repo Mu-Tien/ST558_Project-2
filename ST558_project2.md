@@ -17,7 +17,7 @@ Analysis
 
 click below links to check the analysis of each weekday.
 [Monday analysis](ST558_project2_Monday.md)
-[Tuesday analysis](2%20.md)
+[Tuesday analysis](Tuesday.md)
 [Wednesday analysis](3%20.md)
 [Thursday analysis](4%20.md)
 [Friday analysis](5%20.md)
