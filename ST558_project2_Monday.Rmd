@@ -1,5 +1,5 @@
 ---
-title: "ST558 Project 2 (Monday)"
+title: "ST558 Project 2"
 author: "Mu-Tien, Lee"
 output: 
   github_document:
@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE,warning = FALSE, error = FALSE, message=FALSE)
 
 # Require package
 ```{r require package }
-#install.packages("render")
+#install.packages("")
 library(knitr)
 library(rmarkdown)
 library(MuMIn)
@@ -67,7 +67,7 @@ hist
 
 #prin out summary table for tempature humidity and windspeed
 sum <- HourDataTrain%>% select(c(temp, atemp, hum, windspeed))
-kable(apply(sum, 2,summary), caption="Numeric Summary for weather measurement")
+kable(apply(sum, 2,summary), caption="Numeric Summary for weather measurement", format ="html")
 
 #plot the boxplot of tempature humidity and windspeed (not genralized amount)
 #plot base
@@ -96,7 +96,7 @@ barplot2+scale_fill_discrete(name="year", labels=c(2011,2012))
 Here I use two different method, First one useing a tree-based models using leave one out cross validation. Second, I use the boosted tree model with cross validation. Both two training are done using the `train` function from `caret` package. The data was cantered and scaled before training.Since our response variables is continuous response, I choose to use Regression tree.
 
 ## Tree-based model
-```{r tree based model}
+```{r tree based model, cache=TRUE}
 # set up training control, using leave one out cross validation.
 set.seed(615)
 trctrl <- trainControl(method = "LOOCV", number = 1)
@@ -125,28 +125,32 @@ rpart.plot(RegTree_fit1$finalModel)
 ```
 
 ## Boosted tree model
-```{r boosted tree model}
+
+```{r boosting tree model, cache=TRUE, results="hide"}
 # set up training control, using cross validation with 10 folder
 set.seed(615)
 trctrl <- trainControl(method = "cv", number = 10)
 
 # training using boosted tree models with boosting interation in [200,400] and try max tree depth 5~9
 model2 <- cnt~season+yr+mnth+hr+holiday+weathersit+temp+atemp+hum+windspeed
-RegTree_fit2 <- train(model2, data = HourDataTrain, method = "bstTree",
+RegTree_fit2 <- train(model2, data = HourDataTrain, method = "gbm",
                 trControl=trctrl,
                 preProcess = c("center", "scale"),
-                tuneGrid=expand.grid(mstop=seq(100,400,15),
-                                     maxdepth=4:8, nu=0.1)
+                tuneGrid=expand.grid(n.trees=seq(800,1250,20),
+                                     interaction.depth=6:10,
+                                     shrinkage=0.1, n.minobsinnode=10)
                  )
 
+```
+```{r boosted result}
+
 # show the training result
-RegTree_fit2
+RegTree_fit2$bestTune
 
 # plot the RMSE of selected parameters
 plot(RegTree_fit2)
 
 ```
-
 
 # Predicting using the best tree-base model 
 ```{r predicting tree model}
