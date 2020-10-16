@@ -91,136 +91,18 @@ hist
 ``` r
 #prin out summary table for tempature humidity and windspeed
 sum <- HourDataTrain%>% select(c(temp, atemp, hum, windspeed))
-kable(apply(sum, 2,summary), caption="Numeric Summary for weather measurement", format ="html")
+kable(apply(sum, 2,summary), caption="Numeric Summary for weather measurement")
 ```
 
-<table>
-<caption>
-Numeric Summary for weather measurement
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-temp
-</th>
-<th style="text-align:right;">
-atemp
-</th>
-<th style="text-align:right;">
-hum
-</th>
-<th style="text-align:right;">
-windspeed
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-Min.
-</td>
-<td style="text-align:right;">
-0.0200000
-</td>
-<td style="text-align:right;">
-0.0303000
-</td>
-<td style="text-align:right;">
-0.2100000
-</td>
-<td style="text-align:right;">
-0.0000000
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-1st Qu.
-</td>
-<td style="text-align:right;">
-0.3400000
-</td>
-<td style="text-align:right;">
-0.3333000
-</td>
-<td style="text-align:right;">
-0.4900000
-</td>
-<td style="text-align:right;">
-0.1045000
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Median
-</td>
-<td style="text-align:right;">
-0.5200000
-</td>
-<td style="text-align:right;">
-0.5000000
-</td>
-<td style="text-align:right;">
-0.6400000
-</td>
-<td style="text-align:right;">
-0.1940000
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Mean
-</td>
-<td style="text-align:right;">
-0.4961614
-</td>
-<td style="text-align:right;">
-0.4763708
-</td>
-<td style="text-align:right;">
-0.6329395
-</td>
-<td style="text-align:right;">
-0.1894927
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-3rd Qu.
-</td>
-<td style="text-align:right;">
-0.6600000
-</td>
-<td style="text-align:right;">
-0.6212000
-</td>
-<td style="text-align:right;">
-0.7800000
-</td>
-<td style="text-align:right;">
-0.2537000
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Max.
-</td>
-<td style="text-align:right;">
-0.9200000
-</td>
-<td style="text-align:right;">
-0.8485000
-</td>
-<td style="text-align:right;">
-1.0000000
-</td>
-<td style="text-align:right;">
-0.6866000
-</td>
-</tr>
-</tbody>
-</table>
+|         |       temp|      atemp|        hum|  windspeed|
+|:--------|----------:|----------:|----------:|----------:|
+| Min.    |  0.0200000|  0.0303000|  0.2100000|  0.0000000|
+| 1st Qu. |  0.3400000|  0.3333000|  0.4900000|  0.1045000|
+| Median  |  0.5200000|  0.5000000|  0.6400000|  0.1940000|
+| Mean    |  0.4961614|  0.4763708|  0.6329395|  0.1894927|
+| 3rd Qu. |  0.6600000|  0.6212000|  0.7800000|  0.2537000|
+| Max.    |  0.9200000|  0.8485000|  1.0000000|  0.6866000|
+
 ``` r
 #plot the boxplot of tempature humidity and windspeed (not genralized amount)
 #plot base
@@ -337,7 +219,7 @@ model2 <- cnt~season+yr+mnth+hr+holiday+weathersit+temp+atemp+hum+windspeed
 RegTree_fit2 <- train(model2, data = HourDataTrain, method = "gbm",
                 trControl=trctrl,
                 preProcess = c("center", "scale"),
-                tuneGrid=expand.grid(n.trees=seq(700,1250,25),
+                tuneGrid=expand.grid(n.trees=seq(500,1250,25),
                                      interaction.depth=5:11,
                                      shrinkage=0.1, n.minobsinnode=10)
                  )
@@ -349,7 +231,7 @@ RegTree_fit2$bestTune
 ```
 
     ##     n.trees interaction.depth shrinkage n.minobsinnode
-    ## 130    1050                10       0.1             10
+    ## 178    1050                10       0.1             10
 
 ``` r
 # plot the RMSE of different parameters
