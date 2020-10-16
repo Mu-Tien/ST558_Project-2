@@ -19,6 +19,7 @@ I am going to use two different method to build my model.First, I will use leave
 # Analysis
 
 click below links to check the analysis of each weekday.\
+
 [Monday analysis](ST558_project2_Monday.md)\
 
 [Tuesday analysis](2 .md) \
@@ -31,7 +32,7 @@ click below links to check the analysis of each weekday.\
 
 [Saturday analysis](6 .md) \
 
-[Sunday analysis](0 .md) \
+[Sunday analysis](0 .md)
 
 
 In these analysis, we can see that the boosted tree model has the smaller RMSE on all the training model compare to the tree-base model.
