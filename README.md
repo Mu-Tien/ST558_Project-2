@@ -15,6 +15,7 @@ I am going to use two different method to build my model.First, I will use leave
 Analysis
 ========
 
+<<<<<<< HEAD
 click below links to check the analysis of each weekday.
 [Monday analysis](ST558_project2_Monday.md)
 [Tuesday analysis](Tuesday.md)
@@ -22,6 +23,15 @@ click below links to check the analysis of each weekday.
 [Thursday analysis](Thursday.md)
 [Friday analysis](Friday.md)
 [Saturday analysis](Saturday.md)
+=======
+click below links to check the analysis of each weekday.\
+[Monday analysis](ST558_project2_Monday.md)\
+[Tuesday analysis](Tuesday.md)\
+[Wednesday analysis](Wednesday.md)\
+[Thursday analysis](Thursday.md)\
+[Friday analysis](Friday.md)\
+[Saturday analysis](Saturday.md)\
+>>>>>>> ed0f18593ad6e6003d03aafa28b06b5a1e2f052c
 [Sunday analysis](Sunday.md)
 
 In these analysis, we can see that the boosted tree model has the smaller RMSE on all the training model compare to the tree-base model.Also, boosted model has the lower RMSE when using the testing dataset to predict the rental count.
