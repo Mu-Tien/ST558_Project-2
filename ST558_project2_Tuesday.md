@@ -86,8 +86,7 @@ render("ST558_project2_Monday.Rmd",
       |                                                                            
       |....................................................                  |  74%
     ## label: boosting tree model (with options) 
-    ## List of 2
-    ##  $ cache  : logi TRUE
+    ## List of 1
     ##  $ results: chr "hide"
     ## 
     ## 
@@ -197,8 +196,7 @@ render("ST558_project2_Monday.Rmd",
       |                                                                            
       |....................................................                  |  74%
     ## label: boosting tree model (with options) 
-    ## List of 2
-    ##  $ cache  : logi TRUE
+    ## List of 1
     ##  $ results: chr "hide"
     ## 
     ## 
@@ -308,8 +306,7 @@ render("ST558_project2_Monday.Rmd",
       |                                                                            
       |....................................................                  |  74%
     ## label: boosting tree model (with options) 
-    ## List of 2
-    ##  $ cache  : logi TRUE
+    ## List of 1
     ##  $ results: chr "hide"
     ## 
     ## 
@@ -419,8 +416,7 @@ render("ST558_project2_Monday.Rmd",
       |                                                                            
       |....................................................                  |  74%
     ## label: boosting tree model (with options) 
-    ## List of 2
-    ##  $ cache  : logi TRUE
+    ## List of 1
     ##  $ results: chr "hide"
     ## 
     ## 
@@ -530,8 +526,7 @@ render("ST558_project2_Monday.Rmd",
       |                                                                            
       |....................................................                  |  74%
     ## label: boosting tree model (with options) 
-    ## List of 2
-    ##  $ cache  : logi TRUE
+    ## List of 1
     ##  $ results: chr "hide"
     ## 
     ## 
@@ -641,8 +636,7 @@ render("ST558_project2_Monday.Rmd",
       |                                                                            
       |....................................................                  |  74%
     ## label: boosting tree model (with options) 
-    ## List of 2
-    ##  $ cache  : logi TRUE
+    ## List of 1
     ##  $ results: chr "hide"
     ## 
     ## 

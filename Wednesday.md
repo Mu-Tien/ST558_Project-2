@@ -78,6 +78,13 @@ HourDataTest <- HourData[test, ]
 Summarize the training data
 ===========================
 
+Here I will show you some summary of my training dataset.
+1. I conduct a histogram of the rental count, since this is my response variable.
+2. I built up a summary table of all the weather measurement.
+3. I also showing the weather summary via a boxplot.
+4. I plot the rental count distributed by time.
+5. I plot the rental count distributed by weather situation.
+
 ``` r
 # plot the histogram of rental count
 hist <- ggplot(data=HourDataTrain, aes(x=cnt))+geom_histogram(binwidth = 20, aes(color=yr))
@@ -140,10 +147,15 @@ barplot2+scale_fill_discrete(name="year", labels=c(2011,2012))
 Training Model
 ==============
 
-Here I use two different method to train my model. First method is using a tree-based models with leave one out cross validation. For the second method, I use the boosted tree model with cross validation. Both two training are done using the `train` function from `caret` package. The data was cantered and scaled before training. Moreover, since our response variable is continuous responses, I choose to use Regression tree.
+Here I use two different method to train my model. First method is using a tree-based models with leave one out cross validation. For the second method, I use the boosted tree model with cross validation. Both two training are done using the `train` function from `caret` package. The data was cantered and scaled before training.
 
 Tree-based model
 ----------------
+
+Since our respons variable is continuous. I use the regression tree model to training my data. The `method= "rpart"` was used in `train` function
+Moreover, because I want to use the leave-one-out cross validation for this training, therefore,the `method= "LOOCV"` was used in `trainControl`.
+We can adjust the grid parameter by ourselves. Since the default result shows that `cp` should be very small to have a lowest RMSE. I set a range \[0.0001,0.0005\] to fit for every weekday.
+Something to notice, because the `cp` is too small, when I draw my regression tree, it seems like a mess.
 
 ``` r
 # set up training control, using leave one out cross validation.
@@ -151,7 +163,7 @@ set.seed(615)
 trctrl <- trainControl(method = "LOOCV", number = 1)
 
 # getModelInfo("rpart")
-# training using regression tree models with cp in [0.001, 0.002]
+# training using regression tree models with cp in [0.0001,0.0005]
 # since the cp seems have to be really small when I used the default cp to train
 
 model1 <- cnt~season+yr+mnth+hr+holiday+weathersit+temp+atemp+hum+windspeed
@@ -209,6 +221,10 @@ rpart.plot(RegTree_fit1$finalModel)
 Boosted tree model
 ------------------
 
+Here I want to training my data using boosted tree model. The `method= "gbm"` was used in `train` function
+Because I want to use thecross validation for this training, therefore,the `method= "cv"` was used in `trainControl`.
+We can adjust the grid parameter by ourselves. I set a range of number of tree \[100,1250\] and interaction 5~11 to fit for every weekday.
+
 ``` r
 # set up training control, using cross validation with 10 folder
 set.seed(615)
@@ -219,7 +235,7 @@ model2 <- cnt~season+yr+mnth+hr+holiday+weathersit+temp+atemp+hum+windspeed
 RegTree_fit2 <- train(model2, data = HourDataTrain, method = "gbm",
                 trControl=trctrl,
                 preProcess = c("center", "scale"),
-                tuneGrid=expand.grid(n.trees=seq(300,1250,25),
+                tuneGrid=expand.grid(n.trees=seq(100,1250,25),
                                      interaction.depth=5:11,
                                      shrinkage=0.1, n.minobsinnode=10)
                  )
@@ -230,8 +246,8 @@ RegTree_fit2 <- train(model2, data = HourDataTrain, method = "gbm",
 RegTree_fit2$bestTune
 ```
 
-    ##    n.trees interaction.depth shrinkage n.minobsinnode
-    ## 95     700                 7       0.1             10
+    ##     n.trees interaction.depth shrinkage n.minobsinnode
+    ## 119     700                 7       0.1             10
 
 ``` r
 # plot the RMSE of different parameters
@@ -242,6 +258,8 @@ plot(RegTree_fit2)
 
 Predicting using the best tree-base model
 =========================================
+
+Using the best boosted tree model to testing the data.
 
 ``` r
 # predict use predict function
@@ -256,7 +274,7 @@ count <- data.frame(true_count=HourDataTest$cnt,prediction=tree_pred )
 predPlot <- ggplot(data=count, aes(x=true_count,y=prediction))
 predPlot <- predPlot+labs(title="Prediction V.s. True Count using tree-base model")+geom_point()
 predPlot <- predPlot+geom_smooth(color="orange")+geom_abline(aes(intercept=0,slope=1), color="blue")
-predPlot <- predPlot+geom_text(x=200, y=800,label=label, color="brown")
+predPlot <- predPlot+geom_text(x=200, y=600,label=label, color="brown")
 predPlot
 ```
 
@@ -277,7 +295,7 @@ count2 <- data.frame(True_count=HourDataTest$cnt,prediction=boosted_pred )
 pred_plot <- ggplot(data=count2, aes(x=True_count,y=prediction))
 pred_plot <- pred_plot+labs(title="Prediction V.s. True Count using boosted model")+geom_point()
 pred_plot <- pred_plot+geom_smooth(color="orange")+geom_abline(aes(intercept=0,slope=1), color="blue")
-pred_plot <- pred_plot+geom_text(x=200, y=800,label=lab, color=" brown")
+pred_plot <- pred_plot+geom_text(x=200, y=600,label=lab, color=" brown")
 pred_plot
 ```
 
