@@ -219,7 +219,7 @@ model2 <- cnt~season+yr+mnth+hr+holiday+weathersit+temp+atemp+hum+windspeed
 RegTree_fit2 <- train(model2, data = HourDataTrain, method = "gbm",
                 trControl=trctrl,
                 preProcess = c("center", "scale"),
-                tuneGrid=expand.grid(n.trees=seq(500,1250,25),
+                tuneGrid=expand.grid(n.trees=seq(300,1250,25),
                                      interaction.depth=5:11,
                                      shrinkage=0.1, n.minobsinnode=10)
                  )
@@ -231,7 +231,7 @@ RegTree_fit2$bestTune
 ```
 
     ##     n.trees interaction.depth shrinkage n.minobsinnode
-    ## 178    1050                10       0.1             10
+    ## 226    1050                10       0.1             10
 
 ``` r
 # plot the RMSE of different parameters
