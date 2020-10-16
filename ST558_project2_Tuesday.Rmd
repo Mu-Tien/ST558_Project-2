@@ -11,9 +11,10 @@ knitr::opts_chunk$set(echo = TRUE,warning = FALSE, error = FALSE, message=FALSE)
 ```
 
 ```{r}
-
+library(tibble)
 library(knitr)
 library(rmarkdown)
+
 # set up table for render 
 w <- c(2,3,4,5,6,0)
 output_file <- paste(w,".md")

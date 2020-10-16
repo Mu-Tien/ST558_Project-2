@@ -234,7 +234,7 @@ wind <-boxplot+geom_boxplot(aes(y=windspeed*67, group=season))+labs(y="Wind Spee
 ggarrange(tem, fetem, hum , wind, ncol = 2, nrow = 2)
 ```
 
-![](ST558_project2_Monday_files/figure-markdown_github/summarizing%20data-2.png)
+![](ST558_project2_Monday_files/figure-markdown_github/plotting%20data-1.png)
 
 ``` r
 # plot the count distribution among time and weather
@@ -244,7 +244,7 @@ barplot1 <- barplot1+labs(x="time", y="Rental Count", title="Retal count distrib
 barplot1+scale_fill_discrete(name="year", labels=c(2011,2012))
 ```
 
-![](ST558_project2_Monday_files/figure-markdown_github/summarizing%20data-3.png)
+![](ST558_project2_Monday_files/figure-markdown_github/plotting%20data-2.png)
 
 ``` r
 # by weather
@@ -253,12 +253,12 @@ barplot2 <- barplot2+labs(x="Weather situation, 1: clear day, 2: misty day, 3:ra
 barplot2+scale_fill_discrete(name="year", labels=c(2011,2012))
 ```
 
-![](ST558_project2_Monday_files/figure-markdown_github/summarizing%20data-4.png)
+![](ST558_project2_Monday_files/figure-markdown_github/plotting%20data-3.png)
 
 Training Model
 ==============
 
-Here I use two different method, First one useing a tree-based models using leave one out cross validation. Second, I use the boosted tree model with cross validation. Both two training are done using the `train` function from `caret` package. The data was cantered and scaled before training.Since our response variables is continuous response, I choose to use Regression tree.
+Here I use two different method to train my model. First method is using a tree-based models with leave one out cross validation. For the second method, I use the boosted tree model with cross validation. Both two training are done using the `train` function from `caret` package. The data was cantered and scaled before training. Moreover, since our response variable is continuous responses, I choose to use Regression tree.
 
 Tree-based model
 ----------------
@@ -277,7 +277,7 @@ model1 <- cnt~season+yr+mnth+hr+holiday+weathersit+temp+atemp+hum+windspeed
 RegTree_fit1 <- train(model1, data = HourDataTrain, method = "rpart",
                  trControl=trctrl,
                  preProcess = c("center", "scale"),
-                 tuneGrid=expand.grid(cp=seq(0.0001,0.0015,0.00005))
+                 tuneGrid=expand.grid(cp=seq(0.0001,0.0005,0.00004))
 )
 
 # show the training result
@@ -296,37 +296,19 @@ RegTree_fit1
     ## 
     ##   cp       RMSE      Rsquared   MAE     
     ##   0.00010  74.41616  0.8294464  43.44368
-    ##   0.00015  74.64025  0.8283598  44.13635
-    ##   0.00020  74.74549  0.8278932  44.15232
-    ##   0.00025  74.63540  0.8283110  44.09081
+    ##   0.00014  74.68805  0.8281557  44.10587
+    ##   0.00018  74.66864  0.8282416  44.15918
+    ##   0.00022  74.69121  0.8281267  44.11556
+    ##   0.00026  74.63884  0.8282762  44.10331
     ##   0.00030  74.79066  0.8275371  44.69143
-    ##   0.00035  74.72617  0.8278057  44.56357
-    ##   0.00040  74.67621  0.8280043  44.67748
-    ##   0.00045  74.39497  0.8292049  44.35688
+    ##   0.00034  74.78446  0.8275581  44.66231
+    ##   0.00038  74.76520  0.8276521  44.63508
+    ##   0.00042  74.50287  0.8287256  44.49473
+    ##   0.00046  74.40986  0.8291284  44.37951
     ##   0.00050  74.55470  0.8285169  44.60506
-    ##   0.00055  74.81282  0.8272250  45.52864
-    ##   0.00060  74.91312  0.8267853  45.60972
-    ##   0.00065  75.52083  0.8240864  45.90723
-    ##   0.00070  76.39893  0.8201303  46.66755
-    ##   0.00075  77.17672  0.8165459  47.97332
-    ##   0.00080  77.51435  0.8149758  48.53120
-    ##   0.00085  77.38920  0.8155622  48.20412
-    ##   0.00090  77.38915  0.8155430  48.26579
-    ##   0.00095  77.75470  0.8137672  48.76968
-    ##   0.00100  77.70269  0.8139237  48.75724
-    ##   0.00105  78.21642  0.8113911  49.21642
-    ##   0.00110  78.31466  0.8108923  49.55236
-    ##   0.00115  78.15624  0.8115385  49.60313
-    ##   0.00120  78.31714  0.8107211  49.86625
-    ##   0.00125  78.00094  0.8121361  49.46892
-    ##   0.00130  77.48578  0.8145319  49.00782
-    ##   0.00135  77.53546  0.8142192  49.13666
-    ##   0.00140  77.49758  0.8143671  49.12732
-    ##   0.00145  77.37628  0.8149834  49.04479
-    ##   0.00150  77.66461  0.8136522  49.26109
     ## 
     ## RMSE was used to select the optimal model using the smallest value.
-    ## The final value used for the model was cp = 0.00045.
+    ## The final value used for the model was cp = 0.00046.
 
 ``` r
 # plot the RMSE of selected cp
@@ -350,27 +332,27 @@ Boosted tree model
 set.seed(615)
 trctrl <- trainControl(method = "cv", number = 10)
 
-# training using boosted tree models with boosting interation in [200,400] and try max tree depth 5~9
+# training using boosted tree models with boosting interation in [700,1250] and try max tree depth 5~9
 model2 <- cnt~season+yr+mnth+hr+holiday+weathersit+temp+atemp+hum+windspeed
 RegTree_fit2 <- train(model2, data = HourDataTrain, method = "gbm",
                 trControl=trctrl,
                 preProcess = c("center", "scale"),
-                tuneGrid=expand.grid(n.trees=seq(800,1250,20),
-                                     interaction.depth=6:10,
+                tuneGrid=expand.grid(n.trees=seq(700,1250,25),
+                                     interaction.depth=5:11,
                                      shrinkage=0.1, n.minobsinnode=10)
                  )
 ```
 
 ``` r
-# show the training result
+# show the training result of boosted tree
 RegTree_fit2$bestTune
 ```
 
-    ##    n.trees interaction.depth shrinkage n.minobsinnode
-    ## 80    1000                 9       0.1             10
+    ##     n.trees interaction.depth shrinkage n.minobsinnode
+    ## 130    1050                10       0.1             10
 
 ``` r
-# plot the RMSE of selected parameters
+# plot the RMSE of different parameters
 plot(RegTree_fit2)
 ```
 

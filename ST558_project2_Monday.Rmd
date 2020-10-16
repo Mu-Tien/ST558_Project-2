@@ -69,6 +69,10 @@ hist
 sum <- HourDataTrain%>% select(c(temp, atemp, hum, windspeed))
 kable(apply(sum, 2,summary), caption="Numeric Summary for weather measurement", format ="html")
 
+```
+
+```{r plotting data}
+
 #plot the boxplot of tempature humidity and windspeed (not genralized amount)
 #plot base
 boxplot <- ggplot(data = HourDataTrain, aes(x=season))
@@ -93,10 +97,10 @@ barplot2+scale_fill_discrete(name="year", labels=c(2011,2012))
 ```
 
 # Training Model
-Here I use two different method, First one useing a tree-based models using leave one out cross validation. Second, I use the boosted tree model with cross validation. Both two training are done using the `train` function from `caret` package. The data was cantered and scaled before training.Since our response variables is continuous response, I choose to use Regression tree.
+Here I use two different method to train my model. First method is using a tree-based models with leave one out cross validation. For the second method, I use the boosted tree model with cross validation. Both two training are done using the `train` function from `caret` package. The data was cantered and scaled before training. Moreover, since our response variable is continuous responses, I choose to use Regression tree.
 
 ## Tree-based model
-```{r tree based model, cache=TRUE}
+```{r tree based model}
 # set up training control, using leave one out cross validation.
 set.seed(615)
 trctrl <- trainControl(method = "LOOCV", number = 1)
@@ -110,7 +114,7 @@ model1 <- cnt~season+yr+mnth+hr+holiday+weathersit+temp+atemp+hum+windspeed
 RegTree_fit1 <- train(model1, data = HourDataTrain, method = "rpart",
                  trControl=trctrl,
                  preProcess = c("center", "scale"),
-                 tuneGrid=expand.grid(cp=seq(0.0001,0.0015,0.00005))
+                 tuneGrid=expand.grid(cp=seq(0.0001,0.0005,0.00004))
 )
 
 # show the training result
@@ -125,29 +129,28 @@ rpart.plot(RegTree_fit1$finalModel)
 ```
 
 ## Boosted tree model
-
 ```{r boosting tree model, cache=TRUE, results="hide"}
 # set up training control, using cross validation with 10 folder
 set.seed(615)
 trctrl <- trainControl(method = "cv", number = 10)
 
-# training using boosted tree models with boosting interation in [200,400] and try max tree depth 5~9
+# training using boosted tree models with boosting interation in [700,1250] and try max tree depth 5~9
 model2 <- cnt~season+yr+mnth+hr+holiday+weathersit+temp+atemp+hum+windspeed
 RegTree_fit2 <- train(model2, data = HourDataTrain, method = "gbm",
                 trControl=trctrl,
                 preProcess = c("center", "scale"),
-                tuneGrid=expand.grid(n.trees=seq(800,1250,20),
-                                     interaction.depth=6:10,
+                tuneGrid=expand.grid(n.trees=seq(700,1250,25),
+                                     interaction.depth=5:11,
                                      shrinkage=0.1, n.minobsinnode=10)
                  )
 
 ```
 ```{r boosted result}
 
-# show the training result
+# show the training result of boosted tree
 RegTree_fit2$bestTune
 
-# plot the RMSE of selected parameters
+# plot the RMSE of different parameters
 plot(RegTree_fit2)
 
 ```
