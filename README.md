@@ -15,7 +15,7 @@ I am going to use two different method to build my model.First, I will use leave
 Analysis
 ========
 
-click below links to check the analysis of each weekday.
+click below links to check the analysis of each weekday.\
 [Monday analysis](ST558_project2_Monday.md)\
 [Tuesday analysis](Tuesday.md)\
 [Wednesday analysis](Wednesday.md)\
