@@ -24,15 +24,15 @@ click below links to check the analysis of each weekday.\
 
 [Tuesday analysis](Tuesday.md) \
 
-[Wednesday analysis](3 .md) \
+[Wednesday analysis](Wednesday.md) \
 
-[Thursday analysis](4 .md) \
+[Thursday analysis](Thursday.md) \
 
-[Friday analysis](5 .md) \
+[Friday analysis](Friday.md) \
 
-[Saturday analysis](6 .md) \
+[Saturday analysis](Saturday.md) \
 
-[Sunday analysis](0 .md)
+[Sunday analysis](Sunday.md)
 
 
 In these analysis, we can see that the boosted tree model has the smaller RMSE on all the training model compare to the tree-base model.

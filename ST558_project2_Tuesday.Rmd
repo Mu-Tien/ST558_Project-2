@@ -10,33 +10,41 @@ output:
 knitr::opts_chunk$set(echo = TRUE,warning = FALSE, error = FALSE, message=FALSE)
 ```
 
-```{r}
+```{r package}
 library(tibble)
 library(knitr)
 library(rmarkdown)
 
-# set up table for render 
-w <- c(2,3,4,5,6,0)
-output_file <- paste(w,".md")
-params = lapply(w, FUN=function(x){list(w=x)})
-reports <- tibble(output_file, params)
-
-# apply render function to build other 6 files
-apply(reports, MARGIN = 1,
-      FUN=function(x){
-       render("ST558_project2_Monday.Rmd",
-       output_format = "github_document",
-       output_file = x[[1]],
-       params = x[[2]])
-      }
-)
-
 ```
 
-```{r}
+```{r render the file}
 render("ST558_project2_Monday.Rmd",
        output_format = "github_document",
        output_file = "Tuesday.md",
        params =list(w=2))
+
+render("ST558_project2_Monday.Rmd",
+       output_format = "github_document",
+       output_file = "Wednesday.md",
+       params =list(w=3))
+
+render("ST558_project2_Monday.Rmd",
+       output_format = "github_document",
+       output_file = "Thursday.md",
+       params =list(w=4))
+
+render("ST558_project2_Monday.Rmd",
+       output_format = "github_document",
+       output_file = "Friday.md",
+       params =list(w=5))
+
+render("ST558_project2_Monday.Rmd",
+       output_format = "github_document",
+       output_file = "Saturday.md",
+       params =list(w=6))
+render("ST558_project2_Monday.Rmd",
+       output_format = "github_document",
+       output_file = "Sunday.md",
+       params =list(w=0))
 ```
 

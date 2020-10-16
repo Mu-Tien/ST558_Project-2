@@ -67,7 +67,7 @@ hist
 
 #prin out summary table for tempature humidity and windspeed
 sum <- HourDataTrain%>% select(c(temp, atemp, hum, windspeed))
-kable(apply(sum, 2,summary), caption="Numeric Summary for weather measurement", format ="html")
+kable(apply(sum, 2,summary), caption="Numeric Summary for weather measurement")
 
 ```
 

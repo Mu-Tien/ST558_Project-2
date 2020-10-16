@@ -91,136 +91,18 @@ hist
 ``` r
 #prin out summary table for tempature humidity and windspeed
 sum <- HourDataTrain%>% select(c(temp, atemp, hum, windspeed))
-kable(apply(sum, 2,summary), caption="Numeric Summary for weather measurement", format ="html")
+kable(apply(sum, 2,summary), caption="Numeric Summary for weather measurement")
 ```
 
-<table>
-<caption>
-Numeric Summary for weather measurement
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-temp
-</th>
-<th style="text-align:right;">
-atemp
-</th>
-<th style="text-align:right;">
-hum
-</th>
-<th style="text-align:right;">
-windspeed
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-Min.
-</td>
-<td style="text-align:right;">
-0.1000000
-</td>
-<td style="text-align:right;">
-0.0909000
-</td>
-<td style="text-align:right;">
-0.1600000
-</td>
-<td style="text-align:right;">
-0.0000000
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-1st Qu.
-</td>
-<td style="text-align:right;">
-0.3600000
-</td>
-<td style="text-align:right;">
-0.3485000
-</td>
-<td style="text-align:right;">
-0.4900000
-</td>
-<td style="text-align:right;">
-0.1045000
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Median
-</td>
-<td style="text-align:right;">
-0.5200000
-</td>
-<td style="text-align:right;">
-0.5000000
-</td>
-<td style="text-align:right;">
-0.6600000
-</td>
-<td style="text-align:right;">
-0.1940000
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Mean
-</td>
-<td style="text-align:right;">
-0.5076179
-</td>
-<td style="text-align:right;">
-0.4861924
-</td>
-<td style="text-align:right;">
-0.6405649
-</td>
-<td style="text-align:right;">
-0.1928702
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-3rd Qu.
-</td>
-<td style="text-align:right;">
-0.6600000
-</td>
-<td style="text-align:right;">
-0.6212000
-</td>
-<td style="text-align:right;">
-0.8100000
-</td>
-<td style="text-align:right;">
-0.2836000
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Max.
-</td>
-<td style="text-align:right;">
-0.9400000
-</td>
-<td style="text-align:right;">
-0.8485000
-</td>
-<td style="text-align:right;">
-1.0000000
-</td>
-<td style="text-align:right;">
-0.7761000
-</td>
-</tr>
-</tbody>
-</table>
+|         |       temp|      atemp|        hum|  windspeed|
+|:--------|----------:|----------:|----------:|----------:|
+| Min.    |  0.1000000|  0.0909000|  0.1600000|  0.0000000|
+| 1st Qu. |  0.3600000|  0.3485000|  0.4900000|  0.1045000|
+| Median  |  0.5200000|  0.5000000|  0.6600000|  0.1940000|
+| Mean    |  0.5076179|  0.4861924|  0.6405649|  0.1928702|
+| 3rd Qu. |  0.6600000|  0.6212000|  0.8100000|  0.2836000|
+| Max.    |  0.9400000|  0.8485000|  1.0000000|  0.7761000|
+
 ``` r
 #plot the boxplot of tempature humidity and windspeed (not genralized amount)
 #plot base

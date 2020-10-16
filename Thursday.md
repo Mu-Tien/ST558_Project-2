@@ -51,20 +51,20 @@ HourData <-HourData %>% select(-weekday, -workingday,-instant)
 tbl_df(HourData)
 ```
 
-    ## # A tibble: 2,475 x 12
+    ## # A tibble: 2,471 x 12
     ##    dteday season yr     mnth    hr holiday weathersit  temp atemp   hum
     ##    <chr>   <int> <fct> <int> <int> <fct>        <int> <dbl> <dbl> <dbl>
-    ##  1 2011-~      1 0         1     0 0                1  0.2  0.258  0.64
-    ##  2 2011-~      1 0         1     1 0                1  0.16 0.197  0.74
-    ##  3 2011-~      1 0         1     2 0                1  0.16 0.197  0.74
-    ##  4 2011-~      1 0         1     4 0                1  0.24 0.227  0.48
-    ##  5 2011-~      1 0         1     5 0                1  0.22 0.227  0.47
-    ##  6 2011-~      1 0         1     6 0                1  0.2  0.197  0.47
-    ##  7 2011-~      1 0         1     7 0                1  0.18 0.182  0.43
-    ##  8 2011-~      1 0         1     8 0                1  0.2  0.182  0.4 
-    ##  9 2011-~      1 0         1     9 0                1  0.22 0.197  0.37
-    ## 10 2011-~      1 0         1    10 0                1  0.22 0.197  0.37
-    ## # ... with 2,465 more rows, and 2 more variables: windspeed <dbl>, cnt <int>
+    ##  1 2011-~      1 0         1     0 0                1  0.18 0.242  0.55
+    ##  2 2011-~      1 0         1     1 0                1  0.16 0.227  0.64
+    ##  3 2011-~      1 0         1     2 0                1  0.16 0.227  0.64
+    ##  4 2011-~      1 0         1     4 0                2  0.16 0.197  0.64
+    ##  5 2011-~      1 0         1     5 0                2  0.14 0.182  0.69
+    ##  6 2011-~      1 0         1     6 0                2  0.14 0.167  0.63
+    ##  7 2011-~      1 0         1     7 0                2  0.16 0.227  0.59
+    ##  8 2011-~      1 0         1     8 0                1  0.16 0.227  0.59
+    ##  9 2011-~      1 0         1     9 0                2  0.18 0.242  0.51
+    ## 10 2011-~      1 0         1    10 0                1  0.2  0.258  0.47
+    ## # ... with 2,461 more rows, and 2 more variables: windspeed <dbl>, cnt <int>
 
 ``` r
 #Separate dataset into train (70%) and test (30%) data set
@@ -86,141 +86,23 @@ hist <-hist+scale_fill_discrete(labels=c(2011,2012))
 hist
 ```
 
-![](3_FILE~1/figure-markdown_github/summarizing%20data-1.png)
+![](Thursday_files/figure-markdown_github/summarizing%20data-1.png)
 
 ``` r
 #prin out summary table for tempature humidity and windspeed
 sum <- HourDataTrain%>% select(c(temp, atemp, hum, windspeed))
-kable(apply(sum, 2,summary), caption="Numeric Summary for weather measurement", format ="html")
+kable(apply(sum, 2,summary), caption="Numeric Summary for weather measurement")
 ```
 
-<table>
-<caption>
-Numeric Summary for weather measurement
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-temp
-</th>
-<th style="text-align:right;">
-atemp
-</th>
-<th style="text-align:right;">
-hum
-</th>
-<th style="text-align:right;">
-windspeed
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-Min.
-</td>
-<td style="text-align:right;">
-0.0200000
-</td>
-<td style="text-align:right;">
-0.0152000
-</td>
-<td style="text-align:right;">
-0.1900000
-</td>
-<td style="text-align:right;">
-0.0000000
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-1st Qu.
-</td>
-<td style="text-align:right;">
-0.3400000
-</td>
-<td style="text-align:right;">
-0.3333000
-</td>
-<td style="text-align:right;">
-0.4800000
-</td>
-<td style="text-align:right;">
-0.1045000
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Median
-</td>
-<td style="text-align:right;">
-0.5200000
-</td>
-<td style="text-align:right;">
-0.5000000
-</td>
-<td style="text-align:right;">
-0.6500000
-</td>
-<td style="text-align:right;">
-0.1642000
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Mean
-</td>
-<td style="text-align:right;">
-0.5056005
-</td>
-<td style="text-align:right;">
-0.4826364
-</td>
-<td style="text-align:right;">
-0.6409296
-</td>
-<td style="text-align:right;">
-0.1854523
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-3rd Qu.
-</td>
-<td style="text-align:right;">
-0.6600000
-</td>
-<td style="text-align:right;">
-0.6212000
-</td>
-<td style="text-align:right;">
-0.8100000
-</td>
-<td style="text-align:right;">
-0.2836000
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Max.
-</td>
-<td style="text-align:right;">
-0.9400000
-</td>
-<td style="text-align:right;">
-0.8788000
-</td>
-<td style="text-align:right;">
-1.0000000
-</td>
-<td style="text-align:right;">
-0.6418000
-</td>
-</tr>
-</tbody>
-</table>
+|         |       temp|      atemp|        hum|  windspeed|
+|:--------|----------:|----------:|----------:|----------:|
+| Min.    |  0.1000000|  0.0758000|  0.0000000|  0.0000000|
+| 1st Qu. |  0.3400000|  0.3333000|  0.4700000|  0.1045000|
+| Median  |  0.5000000|  0.4848000|  0.6100000|  0.1940000|
+| Mean    |  0.5064199|  0.4842271|  0.6132678|  0.1907718|
+| 3rd Qu. |  0.6600000|  0.6212000|  0.7700000|  0.2537000|
+| Max.    |  0.9400000|  0.9242000|  1.0000000|  0.6866000|
+
 ``` r
 #plot the boxplot of tempature humidity and windspeed (not genralized amount)
 #plot base
@@ -234,7 +116,7 @@ wind <-boxplot+geom_boxplot(aes(y=windspeed*67, group=season))+labs(y="Wind Spee
 ggarrange(tem, fetem, hum , wind, ncol = 2, nrow = 2)
 ```
 
-![](3_FILE~1/figure-markdown_github/plotting%20data-1.png)
+![](Thursday_files/figure-markdown_github/plotting%20data-1.png)
 
 ``` r
 # plot the count distribution among time and weather
@@ -244,7 +126,7 @@ barplot1 <- barplot1+labs(x="time", y="Rental Count", title="Retal count distrib
 barplot1+scale_fill_discrete(name="year", labels=c(2011,2012))
 ```
 
-![](3_FILE~1/figure-markdown_github/plotting%20data-2.png)
+![](Thursday_files/figure-markdown_github/plotting%20data-2.png)
 
 ``` r
 # by weather
@@ -253,7 +135,7 @@ barplot2 <- barplot2+labs(x="Weather situation, 1: clear day, 2: misty day, 3:ra
 barplot2+scale_fill_discrete(name="year", labels=c(2011,2012))
 ```
 
-![](3_FILE~1/figure-markdown_github/plotting%20data-3.png)
+![](Thursday_files/figure-markdown_github/plotting%20data-3.png)
 
 Training Model
 ==============
@@ -286,43 +168,43 @@ RegTree_fit1
 
     ## CART 
     ## 
-    ## 1732 samples
+    ## 1729 samples
     ##   10 predictor
     ## 
     ## Pre-processing: centered (10), scaled (10) 
     ## Resampling: Leave-One-Out Cross-Validation 
-    ## Summary of sample sizes: 1731, 1731, 1731, 1731, 1731, 1731, ... 
+    ## Summary of sample sizes: 1728, 1728, 1728, 1728, 1728, 1728, ... 
     ## Resampling results across tuning parameters:
     ## 
     ##   cp       RMSE      Rsquared   MAE     
-    ##   0.00010  69.34262  0.8689469  40.72888
-    ##   0.00014  69.49525  0.8683654  41.07013
-    ##   0.00018  69.71530  0.8675204  41.36262
-    ##   0.00022  69.90408  0.8667575  41.82930
-    ##   0.00026  69.57638  0.8679606  41.35149
-    ##   0.00030  69.77883  0.8672371  41.72130
-    ##   0.00034  69.78617  0.8671588  42.26889
-    ##   0.00038  69.78943  0.8671168  42.32354
-    ##   0.00042  70.18148  0.8655887  43.38002
-    ##   0.00046  70.50494  0.8643981  43.89760
-    ##   0.00050  70.57485  0.8641321  44.30955
+    ##   0.00010  60.86147  0.8970593  36.61289
+    ##   0.00014  60.84946  0.8970917  36.89877
+    ##   0.00018  60.91024  0.8968519  37.09426
+    ##   0.00022  60.92366  0.8967952  37.38067
+    ##   0.00026  61.14398  0.8960384  37.95852
+    ##   0.00030  61.03935  0.8963359  38.20563
+    ##   0.00034  61.04983  0.8962482  38.23389
+    ##   0.00038  61.26566  0.8955081  38.32099
+    ##   0.00042  61.63042  0.8943369  38.68553
+    ##   0.00046  61.60945  0.8944215  38.65511
+    ##   0.00050  62.12086  0.8926813  39.15997
     ## 
     ## RMSE was used to select the optimal model using the smallest value.
-    ## The final value used for the model was cp = 1e-04.
+    ## The final value used for the model was cp = 0.00014.
 
 ``` r
 # plot the RMSE of selected cp
 plot(RegTree_fit1)
 ```
 
-![](3_FILE~1/figure-markdown_github/tree%20based%20model-1.png)
+![](Thursday_files/figure-markdown_github/tree%20based%20model-1.png)
 
 ``` r
 # plot my final tree model
 rpart.plot(RegTree_fit1$finalModel)
 ```
 
-![](3_FILE~1/figure-markdown_github/tree%20based%20model-2.png)
+![](Thursday_files/figure-markdown_github/tree%20based%20model-2.png)
 
 Boosted tree model
 ------------------
@@ -348,15 +230,15 @@ RegTree_fit2 <- train(model2, data = HourDataTrain, method = "gbm",
 RegTree_fit2$bestTune
 ```
 
-    ##    n.trees interaction.depth shrinkage n.minobsinnode
-    ## 47     700                 7       0.1             10
+    ##     n.trees interaction.depth shrinkage n.minobsinnode
+    ## 140     725                11       0.1             10
 
 ``` r
 # plot the RMSE of different parameters
 plot(RegTree_fit2)
 ```
 
-![](3_FILE~1/figure-markdown_github/boosted%20result-1.png)
+![](Thursday_files/figure-markdown_github/boosted%20result-1.png)
 
 Predicting using the best tree-base model
 =========================================
@@ -378,7 +260,7 @@ predPlot <- predPlot+geom_text(x=200, y=800,label=label, color="brown")
 predPlot
 ```
 
-![](3_FILE~1/figure-markdown_github/predicting%20tree%20model-1.png)
+![](Thursday_files/figure-markdown_github/predicting%20tree%20model-1.png)
 
 Predicting using the best boosted-tree model
 ============================================
@@ -399,4 +281,4 @@ pred_plot <- pred_plot+geom_text(x=200, y=800,label=lab, color=" brown")
 pred_plot
 ```
 
-![](3_FILE~1/figure-markdown_github/predicting%20boosted%20model-1.png)
+![](Thursday_files/figure-markdown_github/predicting%20boosted%20model-1.png)
