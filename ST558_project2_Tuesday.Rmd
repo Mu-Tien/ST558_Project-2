@@ -1,5 +1,5 @@
 ---
-title: "ST558 Project 2 (Tuesday)"
+title: "automation code"
 author: "Mu-Tien, Lee"
 output: 
   github_document:

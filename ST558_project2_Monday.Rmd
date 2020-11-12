@@ -1,5 +1,5 @@
 ---
-title: "ST558 Project 2"
+title: "Modeling the rental count of bikes _ Main code"
 author: "Mu-Tien, Lee"
 output: 
   github_document:
