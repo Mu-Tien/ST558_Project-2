@@ -212,3 +212,22 @@ pred_plot <- pred_plot+geom_smooth(color="orange")+geom_abline(aes(intercept=0,s
 pred_plot <- pred_plot+geom_text(x=200, y=600,label=lab, color=" brown")
 pred_plot
 ```
+
+```{r}
+# create a linear model using repeated cross-validation
+linear_mod <- train(cnt~season+yr+mnth+hr+holiday+weathersit+temp+atemp+hum+windspeed,
+                    data=HourDataTrain,
+                    method='lm',
+                    preProcess=c("center", "scale"),
+                    metric='RMSE',
+                    tuneLength=10,
+                    trControl=trainControl(method='repeatedcv', number=10, repeats=3)
+                    )
+
+# display the results of the linear model
+summary(linear_mod)
+
+# compare our linear model to our test data
+linear_pred <- predict(linear_mod, newdata=HourDataTest)
+postResample(linear_pred, HourDataTest$cnt)
+```
