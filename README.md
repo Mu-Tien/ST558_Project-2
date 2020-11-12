@@ -1,4 +1,4 @@
-ST558 Project 2
+Modeling the rental count of bikes
 ================
 Mu-Tien, Lee
 
