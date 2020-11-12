@@ -1,4 +1,4 @@
-ST558 Project 2 (Tuesday)
+automation code
 ================
 Mu-Tien, Lee
 
@@ -15,108 +15,73 @@ render("ST558_project2_Monday.Rmd",
        params =list(w=2))
 ```
 
-    ## 
-      |                                                                            
-      |                                                                      |   0%
-      |                                                                            
-      |....                                                                  |   5%
+    ##   |                                                                              |                                                                      |   0%  |                                                                              |...                                                                   |   5%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |.......                                                               |  11%
+    ##   |                                                                              |.......                                                               |  10%
     ## label: setup (with options) 
     ## List of 1
     ##  $ include: logi FALSE
     ## 
-    ## 
-      |                                                                            
-      |...........                                                           |  16%
+    ##   |                                                                              |..........                                                            |  14%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |...............                                                       |  21%
+    ##   |                                                                              |.............                                                         |  19%
     ## label: require package
-    ## 
-      |                                                                            
-      |..................                                                    |  26%
+    ##   |                                                                              |.................                                                     |  24%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |......................                                                |  32%
+    ##   |                                                                              |....................                                                  |  29%
     ## label: data
-    ## 
-      |                                                                            
-      |..........................                                            |  37%
+    ##   |                                                                              |.......................                                               |  33%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |.............................                                         |  42%
+    ##   |                                                                              |...........................                                           |  38%
     ## label: summarizing data
 
-    ## 
-      |                                                                            
-      |.................................                                     |  47%
+    ##   |                                                                              |..............................                                        |  43%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |.....................................                                 |  53%
+    ##   |                                                                              |.................................                                     |  48%
     ## label: plotting data
 
-    ## 
-      |                                                                            
-      |.........................................                             |  58%
+    ##   |                                                                              |.....................................                                 |  52%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |............................................                          |  63%
+    ##   |                                                                              |........................................                              |  57%
     ## label: tree based model
 
-    ## 
-      |                                                                            
-      |................................................                      |  68%
+    ##   |                                                                              |...........................................                           |  62%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |....................................................                  |  74%
+    ##   |                                                                              |...............................................                       |  67%
     ## label: boosting tree model (with options) 
     ## List of 1
     ##  $ results: chr "hide"
     ## 
-    ## 
-      |                                                                            
-      |.......................................................               |  79%
+    ##   |                                                                              |..................................................                    |  71%
     ## label: boosted result
 
-    ## 
-      |                                                                            
-      |...........................................................           |  84%
+    ##   |                                                                              |.....................................................                 |  76%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |...............................................................       |  89%
+    ##   |                                                                              |.........................................................             |  81%
     ## label: predicting tree model
 
-    ## 
-      |                                                                            
-      |..................................................................    |  95%
+    ##   |                                                                              |............................................................          |  86%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |......................................................................| 100%
+    ##   |                                                                              |...............................................................       |  90%
     ## label: predicting boosted model
 
+    ##   |                                                                              |...................................................................   |  95%
+    ##   ordinary text without R code
     ## 
-    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS ST558_project2_Monday.utf8.md --to markdown_github --from markdown+autolink_bare_uris+tex_math_single_backslash --output Tuesday.md --standalone --table-of-contents --toc-depth 3 --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\default.md" 
-    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS Tuesday.md --to html4 --from markdown_github --output Tuesday.html --standalone --self-contained --highlight-style pygments --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\preview.html" --variable "github-markdown-css:C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\github.css" --email-obfuscation none
+    ##   |                                                                              |......................................................................| 100%
+    ## label: unnamed-chunk-1
+    ## 
+    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS ST558_project2_Monday.utf8.md --to gfm --from markdown+autolink_bare_uris+tex_math_single_backslash --output Tuesday.md --standalone --table-of-contents --toc-depth 3 --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\default.md" 
+    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS Tuesday.md --to html4 --from gfm --output Tuesday.html --standalone --self-contained --highlight-style pygments --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\preview.html" --variable "github-markdown-css:C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\github.css" --email-obfuscation none --metadata pagetitle=PREVIEW
 
 ``` r
 render("ST558_project2_Monday.Rmd",
@@ -125,108 +90,73 @@ render("ST558_project2_Monday.Rmd",
        params =list(w=3))
 ```
 
-    ## 
-      |                                                                            
-      |                                                                      |   0%
-      |                                                                            
-      |....                                                                  |   5%
+    ##   |                                                                              |                                                                      |   0%  |                                                                              |...                                                                   |   5%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |.......                                                               |  11%
+    ##   |                                                                              |.......                                                               |  10%
     ## label: setup (with options) 
     ## List of 1
     ##  $ include: logi FALSE
     ## 
-    ## 
-      |                                                                            
-      |...........                                                           |  16%
+    ##   |                                                                              |..........                                                            |  14%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |...............                                                       |  21%
+    ##   |                                                                              |.............                                                         |  19%
     ## label: require package
-    ## 
-      |                                                                            
-      |..................                                                    |  26%
+    ##   |                                                                              |.................                                                     |  24%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |......................                                                |  32%
+    ##   |                                                                              |....................                                                  |  29%
     ## label: data
-    ## 
-      |                                                                            
-      |..........................                                            |  37%
+    ##   |                                                                              |.......................                                               |  33%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |.............................                                         |  42%
+    ##   |                                                                              |...........................                                           |  38%
     ## label: summarizing data
 
-    ## 
-      |                                                                            
-      |.................................                                     |  47%
+    ##   |                                                                              |..............................                                        |  43%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |.....................................                                 |  53%
+    ##   |                                                                              |.................................                                     |  48%
     ## label: plotting data
 
-    ## 
-      |                                                                            
-      |.........................................                             |  58%
+    ##   |                                                                              |.....................................                                 |  52%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |............................................                          |  63%
+    ##   |                                                                              |........................................                              |  57%
     ## label: tree based model
 
-    ## 
-      |                                                                            
-      |................................................                      |  68%
+    ##   |                                                                              |...........................................                           |  62%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |....................................................                  |  74%
+    ##   |                                                                              |...............................................                       |  67%
     ## label: boosting tree model (with options) 
     ## List of 1
     ##  $ results: chr "hide"
     ## 
-    ## 
-      |                                                                            
-      |.......................................................               |  79%
+    ##   |                                                                              |..................................................                    |  71%
     ## label: boosted result
 
-    ## 
-      |                                                                            
-      |...........................................................           |  84%
+    ##   |                                                                              |.....................................................                 |  76%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |...............................................................       |  89%
+    ##   |                                                                              |.........................................................             |  81%
     ## label: predicting tree model
 
-    ## 
-      |                                                                            
-      |..................................................................    |  95%
+    ##   |                                                                              |............................................................          |  86%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |......................................................................| 100%
+    ##   |                                                                              |...............................................................       |  90%
     ## label: predicting boosted model
 
+    ##   |                                                                              |...................................................................   |  95%
+    ##   ordinary text without R code
     ## 
-    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS ST558_project2_Monday.utf8.md --to markdown_github --from markdown+autolink_bare_uris+tex_math_single_backslash --output Wednesday.md --standalone --table-of-contents --toc-depth 3 --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\default.md" 
-    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS Wednesday.md --to html4 --from markdown_github --output Wednesday.html --standalone --self-contained --highlight-style pygments --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\preview.html" --variable "github-markdown-css:C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\github.css" --email-obfuscation none
+    ##   |                                                                              |......................................................................| 100%
+    ## label: unnamed-chunk-1
+    ## 
+    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS ST558_project2_Monday.utf8.md --to gfm --from markdown+autolink_bare_uris+tex_math_single_backslash --output Wednesday.md --standalone --table-of-contents --toc-depth 3 --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\default.md" 
+    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS Wednesday.md --to html4 --from gfm --output Wednesday.html --standalone --self-contained --highlight-style pygments --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\preview.html" --variable "github-markdown-css:C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\github.css" --email-obfuscation none --metadata pagetitle=PREVIEW
 
 ``` r
 render("ST558_project2_Monday.Rmd",
@@ -235,108 +165,73 @@ render("ST558_project2_Monday.Rmd",
        params =list(w=4))
 ```
 
-    ## 
-      |                                                                            
-      |                                                                      |   0%
-      |                                                                            
-      |....                                                                  |   5%
+    ##   |                                                                              |                                                                      |   0%  |                                                                              |...                                                                   |   5%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |.......                                                               |  11%
+    ##   |                                                                              |.......                                                               |  10%
     ## label: setup (with options) 
     ## List of 1
     ##  $ include: logi FALSE
     ## 
-    ## 
-      |                                                                            
-      |...........                                                           |  16%
+    ##   |                                                                              |..........                                                            |  14%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |...............                                                       |  21%
+    ##   |                                                                              |.............                                                         |  19%
     ## label: require package
-    ## 
-      |                                                                            
-      |..................                                                    |  26%
+    ##   |                                                                              |.................                                                     |  24%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |......................                                                |  32%
+    ##   |                                                                              |....................                                                  |  29%
     ## label: data
-    ## 
-      |                                                                            
-      |..........................                                            |  37%
+    ##   |                                                                              |.......................                                               |  33%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |.............................                                         |  42%
+    ##   |                                                                              |...........................                                           |  38%
     ## label: summarizing data
 
-    ## 
-      |                                                                            
-      |.................................                                     |  47%
+    ##   |                                                                              |..............................                                        |  43%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |.....................................                                 |  53%
+    ##   |                                                                              |.................................                                     |  48%
     ## label: plotting data
 
-    ## 
-      |                                                                            
-      |.........................................                             |  58%
+    ##   |                                                                              |.....................................                                 |  52%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |............................................                          |  63%
+    ##   |                                                                              |........................................                              |  57%
     ## label: tree based model
 
-    ## 
-      |                                                                            
-      |................................................                      |  68%
+    ##   |                                                                              |...........................................                           |  62%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |....................................................                  |  74%
+    ##   |                                                                              |...............................................                       |  67%
     ## label: boosting tree model (with options) 
     ## List of 1
     ##  $ results: chr "hide"
     ## 
-    ## 
-      |                                                                            
-      |.......................................................               |  79%
+    ##   |                                                                              |..................................................                    |  71%
     ## label: boosted result
 
-    ## 
-      |                                                                            
-      |...........................................................           |  84%
+    ##   |                                                                              |.....................................................                 |  76%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |...............................................................       |  89%
+    ##   |                                                                              |.........................................................             |  81%
     ## label: predicting tree model
 
-    ## 
-      |                                                                            
-      |..................................................................    |  95%
+    ##   |                                                                              |............................................................          |  86%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |......................................................................| 100%
+    ##   |                                                                              |...............................................................       |  90%
     ## label: predicting boosted model
 
+    ##   |                                                                              |...................................................................   |  95%
+    ##   ordinary text without R code
     ## 
-    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS ST558_project2_Monday.utf8.md --to markdown_github --from markdown+autolink_bare_uris+tex_math_single_backslash --output Thursday.md --standalone --table-of-contents --toc-depth 3 --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\default.md" 
-    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS Thursday.md --to html4 --from markdown_github --output Thursday.html --standalone --self-contained --highlight-style pygments --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\preview.html" --variable "github-markdown-css:C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\github.css" --email-obfuscation none
+    ##   |                                                                              |......................................................................| 100%
+    ## label: unnamed-chunk-1
+    ## 
+    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS ST558_project2_Monday.utf8.md --to gfm --from markdown+autolink_bare_uris+tex_math_single_backslash --output Thursday.md --standalone --table-of-contents --toc-depth 3 --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\default.md" 
+    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS Thursday.md --to html4 --from gfm --output Thursday.html --standalone --self-contained --highlight-style pygments --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\preview.html" --variable "github-markdown-css:C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\github.css" --email-obfuscation none --metadata pagetitle=PREVIEW
 
 ``` r
 render("ST558_project2_Monday.Rmd",
@@ -345,108 +240,73 @@ render("ST558_project2_Monday.Rmd",
        params =list(w=5))
 ```
 
-    ## 
-      |                                                                            
-      |                                                                      |   0%
-      |                                                                            
-      |....                                                                  |   5%
+    ##   |                                                                              |                                                                      |   0%  |                                                                              |...                                                                   |   5%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |.......                                                               |  11%
+    ##   |                                                                              |.......                                                               |  10%
     ## label: setup (with options) 
     ## List of 1
     ##  $ include: logi FALSE
     ## 
-    ## 
-      |                                                                            
-      |...........                                                           |  16%
+    ##   |                                                                              |..........                                                            |  14%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |...............                                                       |  21%
+    ##   |                                                                              |.............                                                         |  19%
     ## label: require package
-    ## 
-      |                                                                            
-      |..................                                                    |  26%
+    ##   |                                                                              |.................                                                     |  24%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |......................                                                |  32%
+    ##   |                                                                              |....................                                                  |  29%
     ## label: data
-    ## 
-      |                                                                            
-      |..........................                                            |  37%
+    ##   |                                                                              |.......................                                               |  33%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |.............................                                         |  42%
+    ##   |                                                                              |...........................                                           |  38%
     ## label: summarizing data
 
-    ## 
-      |                                                                            
-      |.................................                                     |  47%
+    ##   |                                                                              |..............................                                        |  43%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |.....................................                                 |  53%
+    ##   |                                                                              |.................................                                     |  48%
     ## label: plotting data
 
-    ## 
-      |                                                                            
-      |.........................................                             |  58%
+    ##   |                                                                              |.....................................                                 |  52%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |............................................                          |  63%
+    ##   |                                                                              |........................................                              |  57%
     ## label: tree based model
 
-    ## 
-      |                                                                            
-      |................................................                      |  68%
+    ##   |                                                                              |...........................................                           |  62%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |....................................................                  |  74%
+    ##   |                                                                              |...............................................                       |  67%
     ## label: boosting tree model (with options) 
     ## List of 1
     ##  $ results: chr "hide"
     ## 
-    ## 
-      |                                                                            
-      |.......................................................               |  79%
+    ##   |                                                                              |..................................................                    |  71%
     ## label: boosted result
 
-    ## 
-      |                                                                            
-      |...........................................................           |  84%
+    ##   |                                                                              |.....................................................                 |  76%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |...............................................................       |  89%
+    ##   |                                                                              |.........................................................             |  81%
     ## label: predicting tree model
 
-    ## 
-      |                                                                            
-      |..................................................................    |  95%
+    ##   |                                                                              |............................................................          |  86%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |......................................................................| 100%
+    ##   |                                                                              |...............................................................       |  90%
     ## label: predicting boosted model
 
+    ##   |                                                                              |...................................................................   |  95%
+    ##   ordinary text without R code
     ## 
-    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS ST558_project2_Monday.utf8.md --to markdown_github --from markdown+autolink_bare_uris+tex_math_single_backslash --output Friday.md --standalone --table-of-contents --toc-depth 3 --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\default.md" 
-    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS Friday.md --to html4 --from markdown_github --output Friday.html --standalone --self-contained --highlight-style pygments --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\preview.html" --variable "github-markdown-css:C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\github.css" --email-obfuscation none
+    ##   |                                                                              |......................................................................| 100%
+    ## label: unnamed-chunk-1
+    ## 
+    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS ST558_project2_Monday.utf8.md --to gfm --from markdown+autolink_bare_uris+tex_math_single_backslash --output Friday.md --standalone --table-of-contents --toc-depth 3 --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\default.md" 
+    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS Friday.md --to html4 --from gfm --output Friday.html --standalone --self-contained --highlight-style pygments --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\preview.html" --variable "github-markdown-css:C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\github.css" --email-obfuscation none --metadata pagetitle=PREVIEW
 
 ``` r
 render("ST558_project2_Monday.Rmd",
@@ -455,108 +315,73 @@ render("ST558_project2_Monday.Rmd",
        params =list(w=6))
 ```
 
-    ## 
-      |                                                                            
-      |                                                                      |   0%
-      |                                                                            
-      |....                                                                  |   5%
+    ##   |                                                                              |                                                                      |   0%  |                                                                              |...                                                                   |   5%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |.......                                                               |  11%
+    ##   |                                                                              |.......                                                               |  10%
     ## label: setup (with options) 
     ## List of 1
     ##  $ include: logi FALSE
     ## 
-    ## 
-      |                                                                            
-      |...........                                                           |  16%
+    ##   |                                                                              |..........                                                            |  14%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |...............                                                       |  21%
+    ##   |                                                                              |.............                                                         |  19%
     ## label: require package
-    ## 
-      |                                                                            
-      |..................                                                    |  26%
+    ##   |                                                                              |.................                                                     |  24%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |......................                                                |  32%
+    ##   |                                                                              |....................                                                  |  29%
     ## label: data
-    ## 
-      |                                                                            
-      |..........................                                            |  37%
+    ##   |                                                                              |.......................                                               |  33%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |.............................                                         |  42%
+    ##   |                                                                              |...........................                                           |  38%
     ## label: summarizing data
 
-    ## 
-      |                                                                            
-      |.................................                                     |  47%
+    ##   |                                                                              |..............................                                        |  43%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |.....................................                                 |  53%
+    ##   |                                                                              |.................................                                     |  48%
     ## label: plotting data
 
-    ## 
-      |                                                                            
-      |.........................................                             |  58%
+    ##   |                                                                              |.....................................                                 |  52%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |............................................                          |  63%
+    ##   |                                                                              |........................................                              |  57%
     ## label: tree based model
 
-    ## 
-      |                                                                            
-      |................................................                      |  68%
+    ##   |                                                                              |...........................................                           |  62%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |....................................................                  |  74%
+    ##   |                                                                              |...............................................                       |  67%
     ## label: boosting tree model (with options) 
     ## List of 1
     ##  $ results: chr "hide"
     ## 
-    ## 
-      |                                                                            
-      |.......................................................               |  79%
+    ##   |                                                                              |..................................................                    |  71%
     ## label: boosted result
 
-    ## 
-      |                                                                            
-      |...........................................................           |  84%
+    ##   |                                                                              |.....................................................                 |  76%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |...............................................................       |  89%
+    ##   |                                                                              |.........................................................             |  81%
     ## label: predicting tree model
 
-    ## 
-      |                                                                            
-      |..................................................................    |  95%
+    ##   |                                                                              |............................................................          |  86%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |......................................................................| 100%
+    ##   |                                                                              |...............................................................       |  90%
     ## label: predicting boosted model
 
+    ##   |                                                                              |...................................................................   |  95%
+    ##   ordinary text without R code
     ## 
-    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS ST558_project2_Monday.utf8.md --to markdown_github --from markdown+autolink_bare_uris+tex_math_single_backslash --output Saturday.md --standalone --table-of-contents --toc-depth 3 --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\default.md" 
-    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS Saturday.md --to html4 --from markdown_github --output Saturday.html --standalone --self-contained --highlight-style pygments --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\preview.html" --variable "github-markdown-css:C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\github.css" --email-obfuscation none
+    ##   |                                                                              |......................................................................| 100%
+    ## label: unnamed-chunk-1
+    ## 
+    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS ST558_project2_Monday.utf8.md --to gfm --from markdown+autolink_bare_uris+tex_math_single_backslash --output Saturday.md --standalone --table-of-contents --toc-depth 3 --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\default.md" 
+    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS Saturday.md --to html4 --from gfm --output Saturday.html --standalone --self-contained --highlight-style pygments --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\preview.html" --variable "github-markdown-css:C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\github.css" --email-obfuscation none --metadata pagetitle=PREVIEW
 
 ``` r
 render("ST558_project2_Monday.Rmd",
@@ -565,105 +390,70 @@ render("ST558_project2_Monday.Rmd",
        params =list(w=0))
 ```
 
-    ## 
-      |                                                                            
-      |                                                                      |   0%
-      |                                                                            
-      |....                                                                  |   5%
+    ##   |                                                                              |                                                                      |   0%  |                                                                              |...                                                                   |   5%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |.......                                                               |  11%
+    ##   |                                                                              |.......                                                               |  10%
     ## label: setup (with options) 
     ## List of 1
     ##  $ include: logi FALSE
     ## 
-    ## 
-      |                                                                            
-      |...........                                                           |  16%
+    ##   |                                                                              |..........                                                            |  14%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |...............                                                       |  21%
+    ##   |                                                                              |.............                                                         |  19%
     ## label: require package
-    ## 
-      |                                                                            
-      |..................                                                    |  26%
+    ##   |                                                                              |.................                                                     |  24%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |......................                                                |  32%
+    ##   |                                                                              |....................                                                  |  29%
     ## label: data
-    ## 
-      |                                                                            
-      |..........................                                            |  37%
+    ##   |                                                                              |.......................                                               |  33%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |.............................                                         |  42%
+    ##   |                                                                              |...........................                                           |  38%
     ## label: summarizing data
 
-    ## 
-      |                                                                            
-      |.................................                                     |  47%
+    ##   |                                                                              |..............................                                        |  43%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |.....................................                                 |  53%
+    ##   |                                                                              |.................................                                     |  48%
     ## label: plotting data
 
-    ## 
-      |                                                                            
-      |.........................................                             |  58%
+    ##   |                                                                              |.....................................                                 |  52%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |............................................                          |  63%
+    ##   |                                                                              |........................................                              |  57%
     ## label: tree based model
 
-    ## 
-      |                                                                            
-      |................................................                      |  68%
+    ##   |                                                                              |...........................................                           |  62%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |....................................................                  |  74%
+    ##   |                                                                              |...............................................                       |  67%
     ## label: boosting tree model (with options) 
     ## List of 1
     ##  $ results: chr "hide"
     ## 
-    ## 
-      |                                                                            
-      |.......................................................               |  79%
+    ##   |                                                                              |..................................................                    |  71%
     ## label: boosted result
 
-    ## 
-      |                                                                            
-      |...........................................................           |  84%
+    ##   |                                                                              |.....................................................                 |  76%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |...............................................................       |  89%
+    ##   |                                                                              |.........................................................             |  81%
     ## label: predicting tree model
 
-    ## 
-      |                                                                            
-      |..................................................................    |  95%
+    ##   |                                                                              |............................................................          |  86%
     ##   ordinary text without R code
     ## 
-    ## 
-      |                                                                            
-      |......................................................................| 100%
+    ##   |                                                                              |...............................................................       |  90%
     ## label: predicting boosted model
 
+    ##   |                                                                              |...................................................................   |  95%
+    ##   ordinary text without R code
     ## 
-    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS ST558_project2_Monday.utf8.md --to markdown_github --from markdown+autolink_bare_uris+tex_math_single_backslash --output Sunday.md --standalone --table-of-contents --toc-depth 3 --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\default.md" 
-    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS Sunday.md --to html4 --from markdown_github --output Sunday.html --standalone --self-contained --highlight-style pygments --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\preview.html" --variable "github-markdown-css:C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\github.css" --email-obfuscation none
+    ##   |                                                                              |......................................................................| 100%
+    ## label: unnamed-chunk-1
+    ## 
+    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS ST558_project2_Monday.utf8.md --to gfm --from markdown+autolink_bare_uris+tex_math_single_backslash --output Sunday.md --standalone --table-of-contents --toc-depth 3 --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\default.md" 
+    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS Sunday.md --to html4 --from gfm --output Sunday.html --standalone --self-contained --highlight-style pygments --template "C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\preview.html" --variable "github-markdown-css:C:\Users\LeeSF\Documents\R\win-library\4.0\rmarkdown\rmarkdown\templates\github_document\resources\github.css" --email-obfuscation none --metadata pagetitle=PREVIEW
